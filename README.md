@@ -1,16 +1,23 @@
-## Hi there 👋
+## avp9
 
-<!--
-**avp9-nexus/avp9-nexus** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I direct AI agents that buy art at auction — and I sign every transfer myself,
+on a hardware device, outside the system that asked for it.
 
-Here are some ideas to get you started:
+**[nexus-art](https://github.com/avp9-nexus/nexus-art)** — three public
+demonstrations on Base Sepolia. Two curator agents with distinct tastes bid
+against each other; one human gesture releases the funds. Contract
+`0x471796C1644d87f30AD81D36f6d4A56f0e270c23`, source verified.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**[Agent governance](https://github.com/avp9-nexus/nexus-art/blob/main/AGENT-GOVERNANCE.md)**
+— ten rules that stop an agent, and the human directing it, from asserting what
+neither has verified. Each rule is paired with the mistake that produced it. The
+file opens on a failure that happened despite all ten being in force.
+
+Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull/2632)
+on the ERC-7730 registry — a clear-signing descriptor so a hardware wallet shows
+what a transaction *means* instead of a hash.
+
+Writing at [dev.to/avp9nexus](https://dev.to/avp9nexus) ·
+[nexus-art.org](https://nexus-art.org) *(French)* · [@Avp9pro](https://x.com/Avp9pro)
+
+Handmade, solo. Reconverted carpenter.
