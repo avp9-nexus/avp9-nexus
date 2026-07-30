@@ -1,7 +1,7 @@
 ## avp9
 
-I direct AI agents that buy art at auction — and I sign every transfer myself,
-on a hardware device, outside the system that asked for it.
+I direct AI agents that buy art at auction — and every commitment of funds goes
+through my hand, on a hardware device, outside the system that asked for it.
 
 **[nexus-art](https://github.com/avp9-nexus/nexus-art)** — three public
 demonstrations on Base Sepolia. Two curator agents with distinct tastes bid
@@ -9,9 +9,9 @@ against each other; one human gesture releases the funds. Contract
 `0x471796C1644d87f30AD81D36f6d4A56f0e270c23`, source verified.
 
 **[Agent governance](https://github.com/avp9-nexus/nexus-art/blob/main/AGENT-GOVERNANCE.md)**
-— ten rules that stop an agent, and the human directing it, from asserting what
-neither has verified. Each rule is paired with the mistake that produced it. The
-file opens on a failure that happened despite all ten being in force.
+— eleven rules that stop an agent, and the human directing it, from asserting what
+neither has verified. Each rule is paired with the mistake that produced it. The file
+opens on a failure that happened despite every rule then in force.
 
 Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull/2632)
 on the ERC-7730 registry — a clear-signing descriptor so a hardware wallet shows
