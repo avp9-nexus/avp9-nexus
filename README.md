@@ -1,7 +1,7 @@
 ## avp9
 
 I direct AI agents that buy art at auction — and every commitment of funds goes
-through my hand, on a hardware device, outside the system that asked for it.
+through my hand, outside the system that asked for it.
 
 **[nexus-art](https://github.com/avp9-nexus/nexus-art)** — three public
 demonstrations on Base Sepolia. Two curator agents with distinct tastes bid
