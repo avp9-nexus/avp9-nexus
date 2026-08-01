@@ -9,7 +9,7 @@ against each other; one human gesture releases the funds. Contract
 `0x471796C1644d87f30AD81D36f6d4A56f0e270c23`, source verified.
 
 **[Agent governance](https://github.com/avp9-nexus/nexus-art/blob/main/AGENT-GOVERNANCE.md)**
-— eleven rules that stop an agent, and the human directing it, from asserting what
+— twelve rules that stop an agent, and the human directing it, from asserting what
 neither has verified. Each rule is paired with the mistake that produced it. The file
 opens on a failure that happened despite every rule then in force.
 
