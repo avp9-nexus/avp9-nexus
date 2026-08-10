@@ -1,4 +1,3 @@
-![avp9 — agent governance, verifiable on-chain](banner.png)
 ## avp9
 
 I direct AI agents that buy art at auction — and every commitment of funds goes
@@ -23,7 +22,7 @@ Writing at [dev.to/avp9nexus](https://dev.to/avp9nexus) ·
 
 Handmade, solo. Reconverted carpenter.
 
-**On the numbers here** — the operating register is private and moves with every
+**On the numbers here** : the operating register is private and moves with every
 working session; what is published is a dated snapshot of it, never a mirror. A figure
 that was true on the day it was written can be stale by the time you read it. Where
 prose and artefact disagree, the artefact decides: the contract on-chain, the
