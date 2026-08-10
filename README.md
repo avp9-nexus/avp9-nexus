@@ -1,3 +1,4 @@
+![avp9, agent governance, verifiable on-chain](banner.png)
 ## avp9
 
 I direct AI agents that buy art at auction — and every commitment of funds goes
