@@ -23,16 +23,24 @@ demonstrations on Base Sepolia (testnet, no real value at stake). Two curator ag
 with distinct tastes bid against each other; one human gesture releases the funds.
 Contract `0x471796C1644d87f30AD81D36f6d4A56f0e270c23`, source verified.
 
-The agent chains ten decisions on its own. The eleventh, the one that costs, needs a hand:
+The agent chains ten decisions on its own. The eleventh, the one that costs, leaves its
+reach entirely: a confirmation on a channel it has no way to touch, a gate that can
+refuse before the device is ever woken, and a signature checked on return against a
+pinned address.
 
 ```mermaid
 flowchart TD
   A["Curator agent - weak key, no spending power"] --> B["Evaluate, bid, negotiate"]
-  B --> C{"Does this step move money?"}
-  C -->|"no - the agent proceeds alone"| B
-  C -->|yes| D["Human gesture, made outside the system"]
-  D --> E["Vault - signs exactly one thing"]
-  E --> F["Settled on-chain"]
+  B --> C{"Does this step move funds?"}
+  C -->|"no"| B
+  C -->|"yes"| D["Server builds an UNSIGNED transaction - it holds no key"]
+  D --> E["Human confirmation, on a channel the agent cannot reach"]
+  E --> F{"Signing gate on a separate machine decodes the transaction"}
+  F -->|"refuses, without ever reaching the device"| S["Stopped"]
+  F -->|"passes"| G["Hardware device signs"]
+  G --> H{"Server recovers the signature against the pinned address"}
+  H -->|"does not recover"| S
+  H -->|"recovers"| Z["Settled on-chain"]
 ```
 
 Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull/2632)
