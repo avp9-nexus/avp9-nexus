@@ -1,6 +1,10 @@
 ![avp9, agent governance, verifiable on-chain](banner.png)
 ## avp9
 
+[![errata](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Favp9-nexus%2Fnexus-art%2Fmain%2Ferrata.json&query=%24.source.rows&label=errata%20published&color=111)](https://github.com/avp9-nexus/nexus-art/blob/main/ERRATA.md)
+[![caught by an instrument](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Favp9-nexus%2Fnexus-art%2Fmain%2Ferrata.json&query=%24.counts.by_caught_by.instrument&label=caught%20by%20an%20instrument&color=2f7d32)](https://github.com/avp9-nexus/nexus-art/blob/main/ERRATA.md)
+[![contract](https://img.shields.io/badge/Base%20Sepolia-source%20verified-555)](https://sepolia.basescan.org/address/0x471796C1644d87f30AD81D36f6d4A56f0e270c23)
+
 I govern AI agents that commit funds on-chain - and every commitment goes
 through my hand, outside the system that asked for it.
 
@@ -19,6 +23,18 @@ demonstrations on Base Sepolia (testnet, no real value at stake). Two curator ag
 with distinct tastes bid against each other; one human gesture releases the funds.
 Contract `0x471796C1644d87f30AD81D36f6d4A56f0e270c23`, source verified.
 
+The agent chains ten decisions on its own. The eleventh, the one that costs, needs a hand:
+
+```mermaid
+flowchart TD
+  A["Curator agent - weak key, no spending power"] --> B["Evaluate, bid, negotiate"]
+  B --> C{"Does this step move money?"}
+  C -->|"no - the agent proceeds alone"| B
+  C -->|yes| D["Human gesture, made outside the system"]
+  D --> E["Vault - signs exactly one thing"]
+  E --> F["Settled on-chain"]
+```
+
 Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull/2632)
 on the ERC-7730 registry - a clear-signing descriptor so a hardware wallet shows
 what a transaction *means* instead of a hash.
@@ -28,10 +44,18 @@ Writing at [dev.to/avp9nexus](https://dev.to/avp9nexus) ·
 
 Handmade, solo. Reconverted carpenter.
 
-**On the numbers here** : the operating register is private and moves with every
-working session; what is published is a dated snapshot of it, never a mirror. A figure
-that was true on the day it was written can be stale by the time you read it. Where
-prose and artefact disagree, the artefact decides: the contract on-chain, the
-repository at its commit, the preprint at its version. Published surfaces are checked
-against the register, and the ones that cannot be measured are named as such rather
-than assumed current.
+> [!NOTE]
+> **On the numbers here** : the operating register is private and moves with every
+> working session; what is published is a dated snapshot of it, never a mirror. A figure
+> that was true on the day it was written can be stale by the time you read it. Where
+> prose and artefact disagree, the artefact decides: the contract on-chain, the
+> repository at its commit, the preprint at its version. Published surfaces are checked
+> against the register, and the ones that cannot be measured are named as such rather
+> than assumed current.
+>
+> **What that check catches is public.** Claims graved in the journal or published on a
+> public surface that later proved false are collected in
+> [`ERRATA.md`](https://github.com/avp9-nexus/nexus-art/blob/main/ERRATA.md) - generated
+> from the register at every engraving, never retyped, pinned by the hash of the table it
+> comes from, and carrying the column that matters: what caught the error. The two counts
+> at the top of this page are read from that file, not typed here.
