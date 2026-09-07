@@ -28,20 +28,42 @@ reach entirely: a confirmation on a channel it has no way to touch, a gate that 
 refuse before the device is ever woken, and a signature checked on return against a
 pinned address.
 
+<details>
+<summary><b>The path a spend has to walk</b> - two machine refusals around one human gesture</summary>
+
 ```mermaid
 flowchart TD
-  A["Curator agent - weak key, no spending power"] --> B["Evaluate, bid, negotiate"]
-  B --> C{"Does this step move funds?"}
-  C -->|"no"| B
-  C -->|"yes"| D["Server builds an UNSIGNED transaction - it holds no key"]
-  D --> E["Human confirmation, on a channel the agent cannot reach"]
-  E --> F{"Signing gate on a separate machine decodes the transaction"}
-  F -->|"refuses, without ever reaching the device"| S["Stopped"]
-  F -->|"passes"| G["Hardware device signs"]
-  G --> H{"Server recovers the signature against the pinned address"}
-  H -->|"does not recover"| S
-  H -->|"recovers"| Z["Settled on-chain"]
+  A["Agent<br>weak key"] --> B["Bid, negotiate"]
+  B --> C{"Moves funds?"}
+  C -->|no| B
+  C -->|yes| D["Unsigned tx<br>server holds no key"]
+  D --> E["Human confirm<br>agent cannot reach it"]
+  E --> F{"Gate decodes it"}
+  F -->|refuses| S["Stopped"]
+  F -->|passes| G["Device signs"]
+  G --> H{"Recovers to<br>pinned address?"}
+  H -->|no| S
+  H -->|yes| Z["Settled on-chain"]
+
+  classDef agent fill:#1f6feb,stroke:#58a6ff,stroke-width:1px,color:#fff
+  classDef human fill:#8957e5,stroke:#bc8cff,stroke-width:1px,color:#fff
+  classDef check fill:#9e6a03,stroke:#e3b341,stroke-width:1px,color:#fff
+  classDef device fill:#6e5494,stroke:#a371f7,stroke-width:1px,color:#fff
+  classDef stop fill:#da3633,stroke:#f85149,stroke-width:1px,color:#fff
+  classDef done fill:#238636,stroke:#3fb950,stroke-width:1px,color:#fff
+  class A,B,D agent
+  class E human
+  class C,F,H check
+  class G device
+  class S stop
+  class Z done
 ```
+
+Blue is the agent acting alone. Purple is what sits outside it: the human confirmation and
+the device that holds the key. Amber is a check that can stop the spend. Red is a refusal;
+green is the only way through.
+
+</details>
 
 Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull/2632)
 on the ERC-7730 registry - a clear-signing descriptor so a hardware wallet shows
