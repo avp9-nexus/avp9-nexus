@@ -18,6 +18,11 @@ The rules were not designed. Each one is the residue of something that went wron
 and was measured, which is why the file reads as a list of corrections rather than
 a manifesto.
 
+**[Agentic security patterns](https://github.com/avp9-nexus/nexus-art/blob/main/poc-001/PATTERNS-AGENTIC-SECURITY.md)**
+- the other side of the same premise: five patterns that bound what a compromised agent
+can *do*, where the governance file bounds what it can *claim*, with the guarded push and
+the sandbox among them and three limits stated as open rather than closed.
+
 **[nexus-art](https://github.com/avp9-nexus/nexus-art)** - four public
 demonstrations on Base Sepolia (testnet, no real value at stake). Two curator agents
 with distinct tastes bid against each other; one human gesture releases the funds.
