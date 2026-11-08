@@ -9,19 +9,20 @@ I govern AI agents that commit funds on-chain - and every commitment goes
 through my hand, outside the system that asked for it.
 
 **[Agent governance](https://github.com/avp9-nexus/nexus-art/blob/main/AGENT-GOVERNANCE.md)**
-- twelve rules that stop an agent, and the human directing it, from asserting what
+- eighteen rules that stop an agent, and the human directing it, from asserting what
 neither has verified. Each rule carries the mistake that produced it, or a stated
 exception where it has none. The file opens on a failure that happened despite every
-rule then in force.
+rule then in force, and holds a chapter for AI agents that a person has asked to study
+or apply it.
 
-The rules were not designed. Each one is the residue of something that went wrong
-and was measured, which is why the file reads as a list of corrections rather than
-a manifesto.
+Seventeen of the eighteen were not designed: each is the residue of something that went
+wrong and was measured, which is why the file reads as a list of corrections rather than
+a manifesto. The one stated as a principle says so where it stands.
 
 **[Agentic security patterns](https://github.com/avp9-nexus/nexus-art/blob/main/poc-001/PATTERNS-AGENTIC-SECURITY.md)**
 - the other side of the same premise: five patterns that bound what a compromised agent
 can *do*, where the governance file bounds what it can *claim*, with the guarded push and
-the sandbox among them and three limits stated as open rather than closed.
+the sandbox among them, and the limits they leave, each named with the form of its remedy.
 
 **[nexus-art](https://github.com/avp9-nexus/nexus-art)** - four public
 demonstrations on Base Sepolia (testnet, no real value at stake). Two curator agents
@@ -74,13 +75,13 @@ Also: [PR #2632](https://github.com/ethereum/clear-signing-erc7730-registry/pull
 on the ERC-7730 registry - a clear-signing descriptor so a hardware wallet shows
 what a transaction *means* instead of a hash.
 
-Writing at [dev.to/avp9nexus](https://dev.to/avp9nexus) ·
-[nexus-art.org](https://nexus-art.org) *(French)* · [@Avp9pro](https://x.com/Avp9pro)
+Writing at [dev.to/avp9nexus](https://dev.to/avp9nexus),
+[nexus-art.org](https://nexus-art.org) *(French)* and [@Avp9pro](https://x.com/Avp9pro).
 
 Handmade, solo. Reconverted carpenter.
 
 > [!NOTE]
-> **On the numbers here** : the operating register is private and moves with every
+> **On the numbers here:** the operating register is private and moves with every
 > working session; what is published is a dated snapshot of it, never a mirror. A figure
 > that was true on the day it was written can be stale by the time you read it. Where
 > prose and artefact disagree, the artefact decides: the contract on-chain, the
@@ -88,9 +89,9 @@ Handmade, solo. Reconverted carpenter.
 > against the register, and the ones that cannot be measured are named as such rather
 > than assumed current.
 >
-> **What that check catches is public.** Claims graved in the journal or published on a
-> public surface that later proved false are collected in
-> [`ERRATA.md`](https://github.com/avp9-nexus/nexus-art/blob/main/ERRATA.md) - generated
-> from the register at every engraving, never retyped, pinned by the hash of the table it
-> comes from, and carrying the column that matters: what caught the error. The two counts
-> at the top of this page are read from that file, not typed here.
+> **The errors that check catches, when they could do harm, are public.** Claims graved
+> in the journal or published on a public surface that later proved false in that way are
+> collected in [`ERRATA.md`](https://github.com/avp9-nexus/nexus-art/blob/main/ERRATA.md) -
+> generated from the register at every engraving, never retyped, pinned by the hash of the
+> table it comes from, and carrying the column that matters: what caught the error. The two
+> counts at the top of this page are read from that file, not typed here.
